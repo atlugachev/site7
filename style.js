@@ -2,7 +2,7 @@
 const gallery = document.getElementById('gallery');
 const pager = document.getElementById('pager');
 let totalImages = gallery.children.length;
-let imagesPerPage = window.innerWidth > 768 ? 1 : 1; 
+let imagesPerPage = window.innerWidth > 450 ? 1 : 1; 
 let totalPages = Math.ceil(totalImages / imagesPerPage);
 let currentPage = 1;
 let currentTranslate = 0;
@@ -31,7 +31,7 @@ function moveSlider(direction) {
 }
 
 window.addEventListener('resize', () => {
-    imagesPerPage = window.innerWidth > 768 ? 1 : 1;
+    imagesPerPage = window.innerWidth > 450 ? 1 : 1;
     totalPages = Math.ceil(totalImages / imagesPerPage);
     goToPage(currentPage);
 });
