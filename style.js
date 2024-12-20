@@ -2,7 +2,7 @@
 const gallery = document.getElementById('gallery');
 const pager = document.getElementById('pager');
 let totalImages = gallery.children.length;
-let imagesPerPage = window.innerWidth > 450 ? 1 : 1; 
+let imagesPerPage = window.innerWidth > 450 ? 1 : 3; 
 let totalPages = Math.ceil(totalImages / imagesPerPage);
 let currentPage = 1;
 let currentTranslate = 0;
